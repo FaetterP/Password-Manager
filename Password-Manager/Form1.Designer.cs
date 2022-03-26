@@ -1,7 +1,7 @@
 ﻿
 namespace Password_Manager
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,6 +36,7 @@ namespace Password_Manager
             this.PasswordComboBoxLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.AddPasswordButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReadKeyButton
@@ -102,11 +103,22 @@ namespace Password_Manager
             this.AddPasswordButton.UseVisualStyleBackColor = true;
             this.AddPasswordButton.Click += new System.EventHandler(this.AddPasswordButton_Click);
             // 
-            // Form1
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(12, 101);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(94, 29);
+            this.UpdateButton.TabIndex = 7;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 116);
+            this.ClientSize = new System.Drawing.Size(345, 139);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AddPasswordButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.PasswordComboBoxLabel);
@@ -114,8 +126,8 @@ namespace Password_Manager
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.PasswordComboBox);
             this.Controls.Add(this.ReadKeyButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Password manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,6 +143,7 @@ namespace Password_Manager
         private System.Windows.Forms.Label PasswordComboBoxLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button AddPasswordButton;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }
 
