@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Password_Manager
+﻿namespace Password_Manager
 {
     class PasswordElement
     {
-        public string _name;
-        public string _key;
+        private string _name;
+        private string _key;
 
-        public PasswordElement(string str)
+        public string Name => _name;
+        public string Key => _key;
+
+        public PasswordElement(string line)
         {
-            string[] arr = str.Split(" ");
+            string[] arr = line.Split(" ");
 
             _name = arr[0];
             _key = arr[1];

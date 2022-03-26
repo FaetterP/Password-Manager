@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Security.Cryptography;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Password_Manager
 {
@@ -26,9 +20,9 @@ namespace Password_Manager
             string[] lines = File.ReadAllLines(@"passwords.txt");
             _elements = lines.Select((line) => new PasswordElement(line)).ToArray();
 
-            foreach(var t in _elements)
+            foreach (var t in _elements)
             {
-                PasswordComboBox.Items.Add(t._name);
+                PasswordComboBox.Items.Add(t.Name);
             }
         }
 
@@ -52,7 +46,7 @@ namespace Password_Manager
 
         private void PasswordComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex]._key);
+            PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);
         }
     }
 }

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Password_Manager
 {
@@ -18,10 +13,15 @@ namespace Password_Manager
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(@"passwords.txt",true);
-            sw.WriteLine(PasswordNameTextbox.Text + " "+ Crypter.Encrypt(PasswordTextbox.Text));
+            StreamWriter sw = new StreamWriter(@"passwords.txt", true);
+
+            string password = PasswordTextbox.Text;
+            if (string.IsNullOrEmpty(password))
+                password = Crypter.GetPassword();
+
+            sw.WriteLine(PasswordNameTextbox.Text + " " + Crypter.Encrypt(password));
             sw.Close();
-            
+
             Close();
         }
     }
