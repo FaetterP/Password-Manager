@@ -35,6 +35,7 @@ namespace Password_Manager
             this.SaveKeyButton = new System.Windows.Forms.Button();
             this.PasswordComboBoxLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
+            this.AddPasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReadKeyButton
@@ -90,11 +91,22 @@ namespace Password_Manager
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password";
             // 
+            // AddPasswordButton
+            // 
+            this.AddPasswordButton.Location = new System.Drawing.Point(212, 3);
+            this.AddPasswordButton.Name = "AddPasswordButton";
+            this.AddPasswordButton.Size = new System.Drawing.Size(120, 29);
+            this.AddPasswordButton.TabIndex = 6;
+            this.AddPasswordButton.Text = "Add password";
+            this.AddPasswordButton.UseVisualStyleBackColor = true;
+            this.AddPasswordButton.Click += new System.EventHandler(this.AddPasswordButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 116);
+            this.ClientSize = new System.Drawing.Size(345, 116);
+            this.Controls.Add(this.AddPasswordButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.PasswordComboBoxLabel);
             this.Controls.Add(this.SaveKeyButton);
@@ -117,6 +129,7 @@ namespace Password_Manager
         private System.Windows.Forms.Button SaveKeyButton;
         private System.Windows.Forms.Label PasswordComboBoxLabel;
         private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Button AddPasswordButton;
     }
 }
 

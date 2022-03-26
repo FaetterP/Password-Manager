@@ -36,5 +36,11 @@ namespace Password_Manager
         {
             Crypter.SetKey(File.ReadAllBytes(@"key.txt"));
         }
+
+        private void AddPasswordButton_Click(object sender, EventArgs e)
+        {
+            AddPasswordForm form = new AddPasswordForm();
+            form.Show();
+        }
     }
 }

@@ -43,5 +43,14 @@ namespace Password_Manager
 
             return Convert.ToBase64String(encContent);
         }
+
+        public static string GetPassword()
+        {
+            RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();
+            byte[] arr = new byte[10];
+            rngCsp.GetBytes(arr);
+
+            return Convert.ToBase64String(arr);
+        }
     }
 }
