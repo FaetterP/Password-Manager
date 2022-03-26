@@ -14,6 +14,7 @@ namespace Password_Manager
 {
     public partial class Form1 : Form
     {
+        private PasswordElement[] _elements;
 
         public Form1()
         {
@@ -22,7 +23,13 @@ namespace Password_Manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string[] lines = File.ReadAllLines(@"passwords.txt");
+            _elements = lines.Select((line) => new PasswordElement(line)).ToArray();
 
+            foreach(var t in _elements)
+            {
+                PasswordComboBox.Items.Add(t._name);
+            }
         }
 
         private void SaveKeyButton_Click(object sender, EventArgs e)
@@ -41,6 +48,11 @@ namespace Password_Manager
         {
             AddPasswordForm form = new AddPasswordForm();
             form.Show();
+        }
+
+        private void PasswordComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex]._key);
         }
     }
 }

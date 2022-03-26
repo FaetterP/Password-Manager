@@ -6,10 +6,12 @@ namespace Password_Manager
 {
     class Crypter
     {
-        private static RSACryptoServiceProvider s_rsa = new RSACryptoServiceProvider();
+        private static RSACryptoServiceProvider s_rsa;
 
         public static void SetKey(byte[] keyBytes)
         {
+            s_rsa = new RSACryptoServiceProvider();
+
             string key = Encoding.UTF8.GetString(keyBytes);
             s_rsa.FromXmlString(key);
         }

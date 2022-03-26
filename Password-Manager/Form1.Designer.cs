@@ -55,6 +55,7 @@ namespace Password_Manager
             this.PasswordComboBox.Name = "PasswordComboBox";
             this.PasswordComboBox.Size = new System.Drawing.Size(151, 28);
             this.PasswordComboBox.TabIndex = 1;
+            this.PasswordComboBox.SelectedIndexChanged += new System.EventHandler(this.PasswordComboBox_SelectedIndexChanged);
             // 
             // PasswordTextBox
             // 

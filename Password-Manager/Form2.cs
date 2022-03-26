@@ -19,7 +19,7 @@ namespace Password_Manager
         private void AddButton_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter(@"passwords.txt",true);
-            sw.WriteLine(PasswordNameTextbox.Text + " "+ Crypter.GetPassword());
+            sw.WriteLine(PasswordNameTextbox.Text + " "+ Crypter.Encrypt(PasswordTextbox.Text));
             sw.Close();
             
             Close();

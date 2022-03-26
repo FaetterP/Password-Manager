@@ -32,11 +32,13 @@ namespace Password_Manager
             this.PasswordNameTextbox = new System.Windows.Forms.TextBox();
             this.PasswordNameLabel = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.PasswordTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PasswordNameTextbox
             // 
-            this.PasswordNameTextbox.Location = new System.Drawing.Point(74, 39);
+            this.PasswordNameTextbox.Location = new System.Drawing.Point(10, 39);
             this.PasswordNameTextbox.Name = "PasswordNameTextbox";
             this.PasswordNameTextbox.Size = new System.Drawing.Size(125, 27);
             this.PasswordNameTextbox.TabIndex = 0;
@@ -44,7 +46,7 @@ namespace Password_Manager
             // PasswordNameLabel
             // 
             this.PasswordNameLabel.AutoSize = true;
-            this.PasswordNameLabel.Location = new System.Drawing.Point(86, 9);
+            this.PasswordNameLabel.Location = new System.Drawing.Point(22, 9);
             this.PasswordNameLabel.Name = "PasswordNameLabel";
             this.PasswordNameLabel.Size = new System.Drawing.Size(106, 20);
             this.PasswordNameLabel.TabIndex = 1;
@@ -52,7 +54,7 @@ namespace Password_Manager
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(86, 72);
+            this.AddButton.Location = new System.Drawing.Point(22, 72);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(94, 29);
             this.AddButton.TabIndex = 2;
@@ -60,11 +62,29 @@ namespace Password_Manager
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(160, 9);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(65, 20);
+            this.PasswordLabel.TabIndex = 4;
+            this.PasswordLabel.Text = "Passwod";
+            // 
+            // PasswordTextbox
+            // 
+            this.PasswordTextbox.Location = new System.Drawing.Point(148, 39);
+            this.PasswordTextbox.Name = "PasswordTextbox";
+            this.PasswordTextbox.Size = new System.Drawing.Size(125, 27);
+            this.PasswordTextbox.TabIndex = 3;
+            // 
             // AddPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 112);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.PasswordNameLabel);
             this.Controls.Add(this.PasswordNameTextbox);
@@ -80,5 +100,7 @@ namespace Password_Manager
         private System.Windows.Forms.TextBox PasswordNameTextbox;
         private System.Windows.Forms.Label PasswordNameLabel;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.TextBox PasswordTextbox;
     }
 }
