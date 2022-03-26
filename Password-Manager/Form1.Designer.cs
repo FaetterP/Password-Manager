@@ -45,6 +45,7 @@ namespace Password_Manager
             this.ReadKeyButton.TabIndex = 0;
             this.ReadKeyButton.Text = "Read key";
             this.ReadKeyButton.UseVisualStyleBackColor = true;
+            this.ReadKeyButton.Click += new System.EventHandler(this.ReadKeyButton_Click);
             // 
             // PasswordComboBox
             // 
@@ -69,6 +70,7 @@ namespace Password_Manager
             this.SaveKeyButton.TabIndex = 3;
             this.SaveKeyButton.Text = "Save key";
             this.SaveKeyButton.UseVisualStyleBackColor = true;
+            this.SaveKeyButton.Click += new System.EventHandler(this.SaveKeyButton_Click);
             // 
             // PasswordComboBoxLabel
             // 
@@ -101,6 +103,7 @@ namespace Password_Manager
             this.Controls.Add(this.ReadKeyButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
