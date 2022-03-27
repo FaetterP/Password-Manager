@@ -61,6 +61,8 @@ namespace Password_Manager
 
         private void UpdatePasswords()
         {
+            PasswordComboBox.Items.Clear();
+
             string[] lines = File.ReadAllLines(@"passwords.txt");
             _elements = lines.Select((line) => new PasswordElement(line)).ToArray();
 
