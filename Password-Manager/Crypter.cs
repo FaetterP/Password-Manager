@@ -18,7 +18,8 @@ namespace Password_Manager
 
         public static byte[] GenerateKey()
         {
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            const int KEY_SIZE = 2048;
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(KEY_SIZE);
             return Encoding.UTF8.GetBytes(rsa.ToXmlString(true));
         }
 
