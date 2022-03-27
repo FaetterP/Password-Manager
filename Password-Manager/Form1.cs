@@ -2,6 +2,7 @@
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Password_Manager
@@ -41,7 +42,16 @@ namespace Password_Manager
 
         private void PasswordComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);
+            //PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);
+            try
+            {
+                PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);
+            }
+            catch (CryptographicException exc)
+            {
+                ErrorForm form = new ErrorForm();
+                form.Show();
+            }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
