@@ -41,9 +41,9 @@ namespace Password_Manager
             // 
             // ReadKeyButton
             // 
-            this.ReadKeyButton.Location = new System.Drawing.Point(112, 4);
+            this.ReadKeyButton.Location = new System.Drawing.Point(138, 12);
             this.ReadKeyButton.Name = "ReadKeyButton";
-            this.ReadKeyButton.Size = new System.Drawing.Size(94, 29);
+            this.ReadKeyButton.Size = new System.Drawing.Size(94, 30);
             this.ReadKeyButton.TabIndex = 0;
             this.ReadKeyButton.Text = "Read key";
             this.ReadKeyButton.UseVisualStyleBackColor = true;
@@ -52,33 +52,33 @@ namespace Password_Manager
             // PasswordComboBox
             // 
             this.PasswordComboBox.FormattingEnabled = true;
-            this.PasswordComboBox.Location = new System.Drawing.Point(12, 67);
+            this.PasswordComboBox.Location = new System.Drawing.Point(12, 121);
             this.PasswordComboBox.Name = "PasswordComboBox";
-            this.PasswordComboBox.Size = new System.Drawing.Size(151, 28);
+            this.PasswordComboBox.Size = new System.Drawing.Size(120, 28);
             this.PasswordComboBox.TabIndex = 1;
             this.PasswordComboBox.SelectedIndexChanged += new System.EventHandler(this.PasswordComboBox_SelectedIndexChanged);
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(169, 67);
+            this.PasswordTextBox.Location = new System.Drawing.Point(138, 121);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(125, 27);
+            this.PasswordTextBox.Size = new System.Drawing.Size(94, 27);
             this.PasswordTextBox.TabIndex = 2;
             // 
             // SaveKeyButton
             // 
-            this.SaveKeyButton.Location = new System.Drawing.Point(12, 3);
+            this.SaveKeyButton.Location = new System.Drawing.Point(12, 12);
             this.SaveKeyButton.Name = "SaveKeyButton";
-            this.SaveKeyButton.Size = new System.Drawing.Size(94, 29);
+            this.SaveKeyButton.Size = new System.Drawing.Size(120, 30);
             this.SaveKeyButton.TabIndex = 3;
-            this.SaveKeyButton.Text = "Save key";
+            this.SaveKeyButton.Text = "Generate key";
             this.SaveKeyButton.UseVisualStyleBackColor = true;
             this.SaveKeyButton.Click += new System.EventHandler(this.SaveKeyButton_Click);
             // 
             // PasswordComboBoxLabel
             // 
             this.PasswordComboBoxLabel.AutoSize = true;
-            this.PasswordComboBoxLabel.Location = new System.Drawing.Point(12, 44);
+            this.PasswordComboBoxLabel.Location = new System.Drawing.Point(12, 98);
             this.PasswordComboBoxLabel.Name = "PasswordComboBoxLabel";
             this.PasswordComboBoxLabel.Size = new System.Drawing.Size(116, 20);
             this.PasswordComboBoxLabel.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace Password_Manager
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(169, 44);
+            this.PasswordLabel.Location = new System.Drawing.Point(138, 98);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(70, 20);
             this.PasswordLabel.TabIndex = 5;
@@ -95,9 +95,9 @@ namespace Password_Manager
             // 
             // AddPasswordButton
             // 
-            this.AddPasswordButton.Location = new System.Drawing.Point(212, 3);
+            this.AddPasswordButton.Location = new System.Drawing.Point(12, 48);
             this.AddPasswordButton.Name = "AddPasswordButton";
-            this.AddPasswordButton.Size = new System.Drawing.Size(120, 29);
+            this.AddPasswordButton.Size = new System.Drawing.Size(120, 30);
             this.AddPasswordButton.TabIndex = 6;
             this.AddPasswordButton.Text = "Add password";
             this.AddPasswordButton.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@ namespace Password_Manager
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(12, 101);
+            this.UpdateButton.Location = new System.Drawing.Point(138, 49);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(94, 29);
             this.UpdateButton.TabIndex = 7;
@@ -117,7 +117,7 @@ namespace Password_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 139);
+            this.ClientSize = new System.Drawing.Size(251, 163);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AddPasswordButton);
             this.Controls.Add(this.PasswordLabel);

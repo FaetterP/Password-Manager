@@ -22,14 +22,15 @@ namespace Password_Manager
 
         private void SaveKeyButton_Click(object sender, EventArgs e)
         {
-            BinaryWriter bw = new BinaryWriter(File.Open(@"key.txt", FileMode.OpenOrCreate));
-            bw.Write(Crypter.GetKey());
-            bw.Close();
+            GenerateKeyForm form = new GenerateKeyForm();
+            form.Show();
         }
 
         private void ReadKeyButton_Click(object sender, EventArgs e)
         {
-            Crypter.SetKey(File.ReadAllBytes(@"key.txt"));
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+                Crypter.SetKey(File.ReadAllBytes(dialog.FileName));
         }
 
         private void AddPasswordButton_Click(object sender, EventArgs e)

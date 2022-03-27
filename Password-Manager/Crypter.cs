@@ -16,7 +16,7 @@ namespace Password_Manager
             s_rsa.FromXmlString(key);
         }
 
-        public static byte[] GetKey()
+        public static byte[] GenerateKey()
         {
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             return Encoding.UTF8.GetBytes(rsa.ToXmlString(true));
