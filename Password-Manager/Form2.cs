@@ -19,7 +19,7 @@ namespace Password_Manager
             if (string.IsNullOrEmpty(password))
                 password = Crypter.GetPassword();
 
-            sw.WriteLine(PasswordNameTextbox.Text.Replace(' ', ',') + " " + Crypter.Encrypt(password));
+            sw.WriteLine(PasswordNameTextbox.Text.Replace(' ', '_') + " " + Crypter.Encrypt(password));
             sw.Close();
 
             Close();
