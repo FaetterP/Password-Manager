@@ -42,7 +42,6 @@ namespace Password_Manager
 
         private void PasswordComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);
             try
             {
                 PasswordTextBox.Text = Crypter.Decrypt(_elements[PasswordComboBox.SelectedIndex].Key);

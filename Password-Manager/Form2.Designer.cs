@@ -46,11 +46,11 @@ namespace Password_Manager
             // PasswordNameLabel
             // 
             this.PasswordNameLabel.AutoSize = true;
-            this.PasswordNameLabel.Location = new System.Drawing.Point(22, 9);
+            this.PasswordNameLabel.Location = new System.Drawing.Point(12, 9);
             this.PasswordNameLabel.Name = "PasswordNameLabel";
-            this.PasswordNameLabel.Size = new System.Drawing.Size(106, 20);
+            this.PasswordNameLabel.Size = new System.Drawing.Size(111, 20);
             this.PasswordNameLabel.TabIndex = 1;
-            this.PasswordNameLabel.Text = "Passwod name";
+            this.PasswordNameLabel.Text = "Password name";
             // 
             // AddButton
             // 
@@ -67,9 +67,9 @@ namespace Password_Manager
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Location = new System.Drawing.Point(160, 9);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(65, 20);
+            this.PasswordLabel.Size = new System.Drawing.Size(70, 20);
             this.PasswordLabel.TabIndex = 4;
-            this.PasswordLabel.Text = "Passwod";
+            this.PasswordLabel.Text = "Password";
             // 
             // PasswordTextbox
             // 
