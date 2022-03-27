@@ -54,7 +54,7 @@ namespace Password_Manager
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(22, 72);
+            this.AddButton.Location = new System.Drawing.Point(90, 72);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(94, 29);
             this.AddButton.TabIndex = 2;

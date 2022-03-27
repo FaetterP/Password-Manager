@@ -5,7 +5,7 @@
         private string _name;
         private string _key;
 
-        public string Name => _name;
+        public string Name => _name.Replace('_', ' ');
         public string Key => _key;
 
         public PasswordElement(string line)
